@@ -50,15 +50,15 @@ class Program
 {
     public static void Main(string[] args)
     {
-        int[] nums = { 2, 7, 11, 15 };
+        int[] nums = { 11, 15, 2, 7 };
         int target = 9;
-        int[] result = TwoSum.FindTwoSumByBruteForce(nums, target);
-        //int[] result = TwoSum.FindTwoSumByBruteForce(nums, target);
-        //int[] result = TwoSum.FindTwoSumByBruteForce(nums, target);
+        int[] result = TwoSum.FindTwoSumByBruteForce(nums, target);        
+        int[] resultHash = TwoSum.FindTwoSumByHashTable(nums, target);
 
         if (result != null)
         {
-            Console.WriteLine("Índices: [" + result[0] + ", " + result[1] + "]");
+            Console.WriteLine("Índices: [" + result[0] + ", " + result[1] + "] e seus valores " + resultHash[0].ToString() + "," + resultHash[1].ToString());
+            Console.WriteLine("Índices: [" + resultHash[0] + ", " + resultHash[1] + "] e seus valores " + resultHash[0].ToString()+","+ resultHash[1].ToString());
         }
         else
         {
